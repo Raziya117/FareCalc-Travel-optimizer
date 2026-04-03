@@ -18,7 +18,7 @@ FareCalc is a python based application developed for a ride-sharing startup,City
      - Conditional statements for Pricing logic
      - Loop for repeated execution
   
-### Fare Calculation logic
+### 📈Fare Calculation logic
 - Base charge:₹50 (fixed for every ride)
 - Distance Fare:Based on selected vechicle type
      - Economy:₹10/km
