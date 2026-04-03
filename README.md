@@ -10,9 +10,13 @@ FareCalc is a python based application developed for a ride-sharing startup,City
 - Allows multiple ride calculations using loop
 - Displays a clean and formatted receipt
 - 
-### Technologies 
-- Python
+### Key Concepts used 
+- Technology: Python
 - Basic Programming Concepts(Functions,Loops,Conditions,Dictionary)
+     - Function for modular code
+     - Dictionary for rate mapping
+     - Conditional statements for Pricing logic
+     - Loop for repeated execution
   
 ### Fare Calculation logic
 - Base charge:₹50 (fixed for every ride)
@@ -27,9 +31,9 @@ FareCalc is a python based application developed for a ride-sharing startup,City
 1. Open the Python file
 2. Run the code
 3. Enter:
-  - Distance in km
-  - Vechile type(1/2/3)
-  - Hours(0-23)
+     -  Distance in km
+     -  Vechile type(1/2/3)
+     -  Hours(0-23)
 4. View the generated receipt
 5. Choose to caluculate another ride or exit
 
