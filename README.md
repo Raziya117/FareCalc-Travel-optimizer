@@ -2,7 +2,7 @@
 ## Project Description
 FareCalc is a python based application developed for a ride-sharing startup,CityCab.It caluculates the ride fare dynamically based on distance,vehicle type and time.The system also applies extra charges during peak hours and provides discounts for higher fares.
 
-## Features
+### Features
 - Calculates fare based on distance(per km rate)
 - Supports multiple vechicle types(Economy,Premium,SUV)
 - Applies extra charge during peak hours(5PM-8PM)
@@ -10,11 +10,11 @@ FareCalc is a python based application developed for a ride-sharing startup,City
 - Allows multiple ride calculations using loop
 - Displays a clean and formatted receipt
 - 
-## Technologies 
+### Technologies 
 - Python
 - Basic Programming Concepts(Functions,Loops,Conditions,Dictionary)
   
-# Fare Calculation logic
+## Fare Calculation logic
 - Base charge:₹50 (fixed for every ride)
 - Distance Fare:Based on selected vechicle type
      - Economy:₹10/km
