@@ -1,23 +1,5 @@
-'''3. Core Python: The &quot;FareCalc&quot; Travel Optimizer
-Business Case: A ride-sharing startup, &quot;CityCab,&quot; needs a backend script to calculate fares.
-The fare isn&#39;t flat; it changes based on the time of day (Peak Hours) and the type of vehicle
-requested.
-Problem Statement
-Write a script that calculates the final ;Ride Estimate based on distance, vehicle type, and a
-;Surge Pricing; multiplier.
-Student Tasks:
-1. Dictionary Mapping: Store rates in a dictionary: {&#39;Economy&#39;: 10, &#39;Premium&#39;: 18, &#39;SUV&#39;:
-25} (rates per km).
-2. Surge Logic: Ask the user for the &quot;Hour of Day&quot; (0-23). If the hour is between 17 and 20
-(5 PM - 8 PM), apply a 1.5x Surge Multiplier to the total.
-3. Function Definition: Create a function calculate_fare(km, type, hour) that returns the
-final price.
-4. Error Handling: If the user enters a vehicle type not in your dictionary, use a try-except
-block or an if-in check to provide a &quot;Service Not Available&quot; message.
-Deliverable: A .py script that takes user input and prints a formatted &quot;Price Receipt.&quot;'''
-
+#FareCalc Travel Optimizer
 print("WELCOME TO CITYCAB FARE CALCULATOR")
-
 def calculate_fare(dist,vehicle,hours,rates):
         base_charge=50
         
