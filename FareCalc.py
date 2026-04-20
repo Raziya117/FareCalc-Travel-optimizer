@@ -1,38 +1,46 @@
 # FareCalc Travel Optimizer
+print("WELCOME TO CITYCAB FARE CALCULATOR")
+
 def calculate_fare(dist,vehicle,hours,rates):
-        base_charge=50
+    base_charge=50
+    base_fare=dist*rates[vehicle]
+    total=base_charge+base_fare
         
-        base_fare=dist*rates[vehicle]
-        total=base_charge+base_fare
-        
-        if 17<=hours<=20:
-            extra_charge=1.5
-        else:
-            extra_charge=1
-        final_amt=total*extra_charge
-        
-        if final_amt>500:
-            disc=final_amt*0.1
-            final_amt-=disc
-        else:
-            disc=0
-        return base_fare,base_charge,extra_charge,total,disc,final_amt
-while True:
-    dist=float(input("Enter distance to travel in km:"))
-    print("Select Vehicle Type\n 1.Economy(Auto/Bike) \n 2.Premium(Sedan)\n 3.SUV")
-    choice=int(input("Enter your choice(1/2/3): "))
-
-    if choice==1:
-        vehicle="Economy"
-    elif choice==2:
-        vehicle="Premium"
-    elif choice==3:
-        vehicle="SUV"
+    if 17<=hours<=20:
+        extra_charge=1.5
     else:
-        print("Invalid choice!!Please select (1/2/3):")
-        continue
+        extra_charge=1
+    final_amt=total*extra_charge
+        
+    if final_amt>500:
+        disc=final_amt*0.1
+        final_amt-=disc
+    else:
+        disc=0
+    return base_fare,base_charge,extra_charge,total,disc,final_amt
 
-    hours=int(input("Enter hours(0-23):"))
+while True:
+    try:
+        dist=float(input("Enter distance to travel in km:"))
+        print("Select Vehicle Type\n 1.Economy(Auto/Bike) \n 2.Premium(Sedan)\n 3.SUV")
+        choice=int(input("Enter your choice(1/2/3): "))
+
+        if choice==1:
+            vehicle="Economy"
+        elif choice==2:
+            vehicle="Premium"
+        elif choice==3:
+            vehicle="SUV"
+        else:
+            print("Invalid choice!!Please select (1/2/3):")
+            continue
+
+        hours=int(input("Enter hours(0-23):"))
+        
+    except ValueError:
+        print("Invalid input! Please enter numbers only.")
+        continue
+    
     rates={
             "Economy":10,
             "Premium":18,
@@ -56,11 +64,10 @@ while True:
             print("No extra charges applied")
         
         print("Discount: ",disc)
-        print("Final amount: ",final_amt)
+        print(f'Final amount:{final_amt:.2f}')
         print("========================================================")
     
     ch=input("If you want to calculate for another ride enter(YES/NO):")
     if ch.lower()!="yes":
         print("Thank you for using CityCab!\nHappy Riding,Have a great day!!")
         break
-    
